@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>title</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Heebo:900|Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <!-- ADD FONT AWESOME -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <!-- ADD JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- ADD YOUR JS FILE -->
+  <script src="js/chat.js"></script>
+
+
+
+
+</head>
+<style>
+body {
+  margin: 0px;
+  padding: 0px;
+  max-width: 100vw;
+  overflow-x:hidden;
+  background-color: lightgray;
+}
+
+.chat{
+  background-color: #ECECEC;
+  /* Full height */
+  height: 530%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100vw;
+  overflow-x:hidden;
+      transform: translate(0px,0px) !important;
+
+
+
+}
+
+  .chat {
+    width:38vw;
+    height:75vh;
+    background-color: white;
+    margin-left:29vw;
+    margin-top: 5vh;
+    padding-left: 3vh;
+    padding-top: 18vh;
+    position: absolute;
+    font-size: 20px;
+    color:black;
+    font-family: 'Arimo', sans-serif;
+    margin-bottom: 10vh;
+    padding-right: 3vw;
+     border-radius: 30px;
+
+}
+
+
+
+.adhut{
+  margin-top: 8vh;
+  margin-left: 2vw;
+  width:25vw;
+  height:58vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adpost{
+  margin-top: 68vh;
+  margin-left: 2vw;
+  width:25vw;
+  height:28vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adpizza{
+  margin-top: 8vh;
+  margin-left: 73.5vw;
+  width:25vw;
+  height:30vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adubereat{
+  margin-top: 40vh;
+  margin-left: 73.5vw;
+  width:23vw;
+  height:58vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adlyft{
+  margin-top: 8vh;
+  margin-left: 2vw;
+  width:25vw;
+  height:58vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adcaltrain{
+  margin-top: 68vh;
+  margin-left: 2vw;
+  width:25vw;
+  height:28vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adbart{
+  margin-top: 8vh;
+  margin-left: 73.5vw;
+  width:25vw;
+  height:30vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.aduber{
+  margin-top: 40vh;
+  margin-left: 73.5vw;
+  width:23vw;
+  height:58vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adsephora{
+  margin-top: 8vh;
+  margin-left: 2vw;
+  width:25vw;
+  height:58vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adssense{
+  margin-top: 68vh;
+  margin-left: 2vw;
+  width:25vw;
+  height:28vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adhm{
+  margin-top: 8vh;
+  margin-left: 73.5vw;
+  width:25vw;
+  height:30vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+.adfreepeople{
+  margin-top: 40vh;
+  margin-left: 73.5vw;
+  width:23vw;
+  height:58vh;
+  background-color: gray;
+  position: absolute;
+  opacity:.6;
+}
+
+  .talking {
+    width: 30vw;
+    height: 6vh;
+    background-color: white;
+    margin-left: 3vw;
+    margin-top: 46vh;
+    position: absolute;
+    border-radius: 25px;
+
+  }
+
+  .botton {
+
+    background-color: white;
+    margin-left: 34vw;
+    margin-top: 46vh;
+    position: absolute;
+    color: black;
+    font-size: 28px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 25px;
+
+  }
+
+  .img {
+    width: 2vw;
+    height: 3.5vh;
+    position: absolute;
+
+  }
+
+  .me {
+    text-align: right;
+
+  }
+
+  .chatitem {
+    width:100%;
+    position: relative;
+  }
+
+  .theirchat {
+    text-align:left;
+    clear:both;
+  }
+
+  .mychat {
+    text-align:right;
+    clear:both;
+  }
+
+  form.submitit {
+      background-color: white;
+      width: calc(100% - 20px);
+      right: 10px;
+      margin-bottom: 10px;
+      height: 60px;
+      border-radius: 40px;
+      bottom: 0px;
+      position: absolute;
+  }
+
+  .hidechat {
+    opacity:0;
+    transition-delay: 2s;
+  }
+
+  .showchat.mychat {
+    opacity:1;
+  }
+
+  .showchat.theirchat {
+    opacity:1;
+    transition-delay: 2s;
+  }
+
+  .hidead {
+    opacity:0;
+  }
+
+  .chatbutton {
+      color: white;
+      background-color: #6183fd;
+      padding: 12px;
+      text-align: center;
+      font-size: 28px;
+      border-radius: 32px;
+      margin-top: 4px;
+      float: right;
+      margin-right: 4px;
+      cursor:pointer;
+  }
+
+  .chatbutton:hover {
+      background-color: red;
+  }
+
+  .chatbutton:active {
+      background-color: black;
+  }
+
+  .thierchat p, .theirchat i {
+    float: left;
+}
+
+.mychat p, .mychat i {
+    float: right;
+}
+
+.theirchat i {
+    background-color: blue;
+    padding: 8px 10px 5px 10px;
+    height: 24px;
+    border-radius: 30px;
+    margin-top: -6px;
+    margin-right: 12px;
+}
+
+.mychat i {
+  background-color: red;
+      padding: 8px 10px 5px 10px;
+      height: 24px;
+      border-radius: 30px;
+      margin-top: 15px;
+      margin-left: 12px;
+}
+
+input.thisinput {
+    font-size: 29px;
+    border: none;
+    margin-top: 9px;
+    width: 86%;
+    float: left;
+    margin-left: 20px;
+}
+.chatbar{
+  position:fixed;
+  float: hidden;
+  width: 43vw;
+  margin-left:-1.6vw;
+  margin-top: 62vh;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.chattop{
+  position:fixed;
+  float: hidden;
+  width: 43vw;
+  margin-left:-1.6vw;
+  margin-top: -18vh;
+}
+.chat1{
+  background-color: lightgray;
+  padding-left: 0.5vw;
+  padding-right: -2vw;
+  padding-top: 0.02vh;
+  padding-bottom: 0.02vh;
+  margin-left: 0vw;
+  margin-right: 10vw;
+  border-radius: 30px;
+
+}
+.chat2{
+  background-color: lightgray;
+  padding-left: 0.5vw;
+  padding-right: -10vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  margin-left: 0vw;
+  margin-right: 10vw;
+  border-radius: 30px;
+
+}
+.chat3{
+  background-color: lightgray;
+  padding-left: 0.5vw;
+  padding-right: -10vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  margin-left: 0vw;
+  margin-right: 10vw;
+  border-radius: 30px;
+
+}
+.chat4{
+  background-color: lightgray;
+  padding-left: 0.5vw;
+  padding-right: -10vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  margin-left: 0vw;
+  margin-right: 10vw;
+  border-radius: 30px;
+
+}
+.chat5{
+  background-color: lightgray;
+  padding-left: 0.5vw;
+  padding-right: -10vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  margin-left: 0vw;
+  margin-right: 10vw;
+  border-radius: 30px;
+
+}
+.chat6{
+  background-color: lightgray;
+  padding-left: 0.5vw;
+  padding-right: -10vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  margin-left: 0vw;
+  margin-right: 10vw;
+  border-radius: 30px;
+
+}
+.chat7{
+  background-color: lightgray;
+  padding-left: 0.5vw;
+  padding-right: -10vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  margin-left: 0vw;
+  margin-right: 10vw;
+  border-radius: 30px;
+
+}
+.hidead{
+  opacity: 0;
+}
+
+</style>
+
+
+
+<body>
+
+
+  <div class="chat">
+    <img src="images/chattop.jpeg" class="chattop">
+    <img src="images/chatbar.jpg" class="chatbar">
+    <div class="chatitem theirchat chat1 showchat">
+      <i class="fa fa-user" aria-hidden="true" colour="darkgreen"></i>
+      <p>Hi,Crystal. Are you going to Jan's birthday <br>
+      party tonight?</p>
+    </div>
+    <div class="chatitem mychat chat2 hidechat">
+      <i class="fa fa-user" aria-hidden="true" colour="lightgray"></i>
+      <p> 9pm. I can order some
+      food now if you want.</p>
+    </div>
+    <div class="chatitem theirchat chat3 hidechat">
+      <i class="fa fa-user" aria-hidden="true" colour="darkgreen"></i>
+      <p>Some pizza please.<br>
+       How will you get there?</p>
+    </div>
+    <div class="chatitem mychat chat4 hidechat">
+      <i class="fa fa-user" aria-hidden="true" colour="lightgray"></i>
+      <p>Maybe I will call and uber or lyft.</p>
+    </div>
+    <div class="chatitem theirchat chat5 hidechat" colour="darkgreen">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <p>Have you brought a gift for her?</p>
+    </div>
+    <div class="chatitem mychat chat6 hidechat">
+      <i class="fa fa-user" aria-hidden="true" colour="lightgray"></i>
+      <p>I am gonna buy her gift afternoon.</p>
+    </div>
+    <div class="chatitem theirchat chat7 hidechat" colour="darkgreen">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <p>Okay.That will be great.See you then.</p>
+    </div>
+
+
+    <form class="submitit">
+      <input class="thisinput" type="text"></input><i class="fa fa-arrow-up chatbutton" aria-hidden="true"></i>
+
+    </form>
+
+  </div>
+
+
+
+
+
+
+  <img src="images/pizza1.png" class="adhut hidead ad1"/>
+  <img src="images/pizza3.jpg" class="adpost hidead ad1"/>
+  <img src="images/postmates.png" class="adpizza hidead ad1"/>
+  <img src="images/ubereat.jpg" class="adubereat hidead ad1"/>
+
+  <img src="images/lyft.jpg" class="adlyft hidead ad2"/>
+  <img src="images/caltrain.jpg" class="adcaltrain hidead ad2"/>
+  <img src="images/bart.jpg" class="adbart hidead ad2"/>
+  <img src="images/uber.jpg" class="aduber hidead ad2"/>
+
+  <img src="images/sephora.jpg" class="adsephora hidead ad3"/>
+  <img src="images/ssense.gif" class="adssense hidead ad3"/>
+  <img src="images/HM.png" class="adhm hidead ad3"/>
+  <img src="images/freepeople.jpg" class="adfreepeople hidead ad3"/>
+
+
+
+
+</body>
+
+</html>
