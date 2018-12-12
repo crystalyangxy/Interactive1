@@ -6,8 +6,7 @@
   <title>title</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Heebo:900|Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arimo|Quicksand|Roboto" rel="stylesheet">
 
   <!-- ADD FONT AWESOME -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -57,12 +56,14 @@ body {
     padding-left: 3vh;
     padding-top: 18vh;
     position: absolute;
-    font-size: 20px;
+    font-size: 17px;
     color:black;
-    font-family: 'Arimo', sans-serif;
+    font: 'San Francisco', Helvetica, Arial, san-serif;
     margin-bottom: 10vh;
     padding-right: 3vw;
      border-radius: 30px;
+     font-family: 'Arimo', sans-serif;
+
 
 }
 
@@ -230,6 +231,8 @@ body {
   .mychat {
     text-align:right;
     clear:both;
+    background-color:lightgray;
+
   }
 
   form.submitit {
@@ -241,6 +244,7 @@ body {
       border-radius: 40px;
       bottom: 0px;
       position: absolute;
+          border: 1px solid grey;
   }
 
   .hidechat {
@@ -291,40 +295,46 @@ body {
 }
 
 .theirchat i {
-    background-color: blue;
-    padding: 8px 10px 5px 10px;
-    height: 24px;
-    border-radius: 30px;
-    margin-top: -6px;
-    margin-right: 12px;
+  background-color: #8a8f91;
+      padding: 4px 8px 1px 8px;
+
+      height: 24px;
+      border-radius: 30px;
+      margin-top: 14px;
+      margin-right: 12px;
+      color: white;
+      position: absolute;
+      margin-left: 11px;
+}
+
+.theirchat p {
+    padding-left: 64px;
+    padding-right:2vw;
+}
+.mychat p {
+    padding-left: 64px;
+    padding-right:2vw;
 }
 
 .mychat i {
-  background-color: red;
-      padding: 8px 10px 5px 10px;
-      height: 24px;
-      border-radius: 30px;
-      margin-top: 15px;
-      margin-left: 12px;
+  background-color: #6183fd;
+  padding: 4px 8px 1px 8px;
+  height: 24px;
+  border-radius: 30px;
+  margin-top: 15px;
+  margin-left: 12px;
+  color: white;
 }
 
 input.thisinput {
     font-size: 29px;
     border: none;
     margin-top: 9px;
-    width: 86%;
+    width: 66%;
     float: left;
     margin-left: 20px;
 }
-.chatbar{
-  position:fixed;
-  float: hidden;
-  width: 43vw;
-  margin-left:-1.6vw;
-  margin-top: 62vh;
-  overflow-y:scroll;
-  overflow-x:hidden;
-}
+
 .chattop{
   position:fixed;
   float: hidden;
@@ -344,7 +354,7 @@ input.thisinput {
 
 }
 .chat2{
-  background-color: lightgray;
+
   padding-left: 0.5vw;
   padding-right: -10vw;
   padding-top: 0.2vh;
@@ -422,7 +432,7 @@ input.thisinput {
 
   <div class="chat">
     <img src="images/chattop.jpeg" class="chattop">
-    <img src="images/chatbar.jpg" class="chatbar">
+
     <div class="chatitem theirchat chat1 showchat">
       <i class="fa fa-user" aria-hidden="true" colour="darkgreen"></i>
       <p>Hi,Crystal. Are you going to Jan's birthday <br>
@@ -430,7 +440,7 @@ input.thisinput {
     </div>
     <div class="chatitem mychat chat2 hidechat">
       <i class="fa fa-user" aria-hidden="true" colour="lightgray"></i>
-      <p> 9pm. I can order some
+      <p> &9pm. I can order some
       food now if you want.</p>
     </div>
     <div class="chatitem theirchat chat3 hidechat">
