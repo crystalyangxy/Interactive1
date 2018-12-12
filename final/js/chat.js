@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     $(".chatbutton").click(function() {
 
+      $("input").val("");
+
 
       if ( $('.chat1').hasClass( "showchat" ) && $('.chat2').hasClass( "hidechat" )) {
 
